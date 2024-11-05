@@ -1,0 +1,11 @@
+{
+  "nombre" : "Represa",
+  "inversion" : 10000.0,
+  "fechaInicioConstruccion" : 1761782400000,
+  "fechaFinConstruccion" : 1896134400000,
+  "tiempoVida" : 30,
+  "inversionistas" : [ "Luis Diaz", "Juan Aguirre" ],
+  "electricidadGeneradaPorDia" : 1000.0,
+  "ubicacion" : "Loja",
+  "tipoEnergia" : "Hidraulica"
+}

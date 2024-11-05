@@ -1,0 +1,10 @@
+{
+  "nombre" : "Proyecto Solar Ejemplo",
+  "inversion" : 1000000.0,
+  "fechaInicioConstruccion" : 1704085200000,
+  "fechaFinConstruccion" : 1735707600000,
+  "tiempoVida" : 30,
+  "electricidadGeneradaPorDia" : 1500.0,
+  "ubicacion" : "Ubicación de Ejemplo",
+  "tipoEnergia" : "Solar"
+}

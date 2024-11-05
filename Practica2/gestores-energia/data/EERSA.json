@@ -1,0 +1,11 @@
+{
+  "nombre" : "EERSA",
+  "inversion" : 123522.0,
+  "fechaInicioConstruccion" : 941241600000,
+  "fechaFinConstruccion" : 1107216000000,
+  "tiempoVida" : 40,
+  "inversionistas" : [ "Juan ", "Daniel" ],
+  "electricidadGeneradaPorDia" : 1000.0,
+  "ubicacion" : "Loja",
+  "tipoEnergia" : "Electrica"
+}

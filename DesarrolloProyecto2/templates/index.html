@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Proyectos</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Proyectos Energéticos</h1>
+
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Formulario de Proyecto</h5>
+                <form class="row g-3" action="/proyectos" method="POST">
+                    <div class="col-md-12">
+                        <label for="inputNombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="inputNombre" name="nombre" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputInversion" class="form-label">Inversión</label>
+                        <input type="number" step="0.01" class="form-control" id="inputInversion" name="inversion" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputFechaInicio" class="form-label">Fecha de Inicio de Construcción</label>
+                        <input type="date" class="form-control" id="inputFechaInicio" name="fechaInicioConstruccion" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputFechaFin" class="form-label">Fecha de Fin de Construcción</label>
+                        <input type="date" class="form-control" id="inputFechaFin" name="fechaFinConstruccion" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputTiempoVida" class="form-label">Tiempo de Vida (años)</label>
+                        <input type="number" class="form-control" id="inputTiempoVida" name="tiempoVida" required>
+                    </div>
+                    <div class="col-12">
+                        <label for="inputInversionistas" class="form-label">Inversionistas (separados por comas)</label>
+                        <input type="text" class="form-control" id="inputInversionistas" name="inversionistas" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputElectricidad" class="form-label">Electricidad Generada por Día</label>
+                        <input type="number" step="0.01" class="form-control" id="inputElectricidad" name="electricidadGeneradaPorDia" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputUbicacion" class="form-label">Ubicación</label>
+                        <input type="text" class="form-control" id="inputUbicacion" name="ubicacion" required>
+                    </div>
+                    <div class="col-md-12">
+                        <label for="inputTipoEnergia" class="form-label">Tipo de Energía</label>
+                        <input type="text" class="form-control" id="inputTipoEnergia" name="tipoEnergia" required>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Crear Proyecto</button>
+                        <button type="reset" class="btn btn-secondary">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <h2 class="mb-4">Lista de Proyectos</h2>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Proyectos Registrados</h5>
+                <table class="table table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Inversión</th>
+                            <th scope="col">Fecha de Inicio</th>
+                            <th scope="col">Fecha de Fin</th>
+                            <th scope="col">Tiempo de Vida</th>
+                            <th scope="col">Inversionistas</th>
+                            <th scope="col">Electricidad Generada por Día</th>
+                            <th scope="col">Ubicación</th>
+                            <th scope="col">Tipo de Energía</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for proyecto in proyectos %}
+                        <tr>
+                            <th scope="row">{{ loop.index }}</th>
+                            <td>{{ proyecto.nombre }}</td>
+                            <td>{{ proyecto.inversion }}</td>
+                            <td>{{ proyecto.fechaInicioConstruccion }}</td>
+                            <td>{{ proyecto.fechaFinConstruccion }}</td>
+                            <td>{{ proyecto.tiempoVida }}</td>
+                            <td>{{ proyecto.inversionistas }}</td>
+                            <td>{{ proyecto.electricidadGeneradaPorDia }}</td>
+                            <td>{{ proyecto.ubicacion }}</td>
+                            <td>{{ proyecto.tipoEnergia }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <h2 class="mb-4">Gráfico de Inversión por Proyecto</h2>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Inversión por Proyecto</h5>
+                <canvas id="barChart" style="max-height: 400px;"></canvas>
+                <script>
+                    document.addEventListener("DOMContentLoaded", () => {
+                        new Chart(document.querySelector('#barChart'), {
+                            type: 'bar',
+                            data: {
+                                labels: [{% for proyecto in proyectos %} '{{ proyecto.nombre }}', {% endfor %}],
+                                datasets: [{
+                                    label: 'Inversión',
+                                    data: [{% for proyecto in proyectos %} {{ proyecto.inversion }}, {% endfor %}],
+                                    backgroundColor: [
+                                        'rgba(255, 99, 132, 0.2)',
+                                        'rgba(255, 159, 64, 0.2)',
+                                        'rgba(255, 205, 86, 0.2)',
+                                        'rgba(75, 192, 192, 0.2)',
+                                        'rgba(54, 162, 235, 0.2)',
+                                        'rgba(153, 102, 255, 0.2)',
+                                        'rgba(201, 203, 207, 0.2)'
+                                    ],
+                                    borderColor: [
+                                        'rgb(255, 99, 132)',
+                                        'rgb(255, 159, 64)',
+                                        'rgb(255, 205, 86)',
+                                        'rgb(75, 192, 192)',
+                                        'rgb(54, 162, 235)',
+                                        'rgb(153, 102, 255)',
+                                        'rgb(201, 203, 207)'
+                                    ],
+                                    borderWidth: 1
+                                }]
+                            },
+                            options: {
+                                scales: {
+                                    y: {
+                                        beginAtZero: true
+                                    }
+                                }
+                            }
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

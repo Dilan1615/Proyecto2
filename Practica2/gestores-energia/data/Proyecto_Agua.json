@@ -1,0 +1,11 @@
+{
+  "nombre" : "Proyecto Agua",
+  "inversion" : 1045.0,
+  "fechaInicioConstruccion" : 971308800000,
+  "fechaFinConstruccion" : 1372982400000,
+  "tiempoVida" : 78,
+  "inversionistas" : [ "Juan", " Daniel " ],
+  "electricidadGeneradaPorDia" : 784516.0,
+  "ubicacion" : "Quito",
+  "tipoEnergia" : "Nuclear"
+}

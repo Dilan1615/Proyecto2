@@ -1,0 +1,11 @@
+{
+  "nombre" : "Proyecto Elena",
+  "inversion" : 400000.0,
+  "fechaInicioConstruccion" : 1355270400000,
+  "fechaFinConstruccion" : 1606780800000,
+  "tiempoVida" : 50,
+  "inversionistas" : [ "Familiares", "utpl" ],
+  "electricidadGeneradaPorDia" : 12345.0,
+  "ubicacion" : "Quito",
+  "tipoEnergia" : "Eolica"
+}

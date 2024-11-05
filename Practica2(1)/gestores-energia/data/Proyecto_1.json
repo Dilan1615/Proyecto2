@@ -1,0 +1,11 @@
+{
+  "nombre" : "Proyecto 1",
+  "inversion" : 10.0,
+  "fechaInicioConstruccion" : 1704067200000,
+  "fechaFinConstruccion" : 1893456000000,
+  "tiempoVida" : 50,
+  "inversionistas" : [ "Daniel" ],
+  "electricidadGeneradaPorDia" : 9000.0,
+  "ubicacion" : "Loja",
+  "tipoEnergia" : "Eolica"
+}

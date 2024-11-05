@@ -1,0 +1,11 @@
+[ {
+  "nombre" : "Proyecto Solar",
+  "inversion" : 1000000.0,
+  "fechaInicioConstruccion" : 1704085200000,
+  "fechaFinConstruccion" : 1735707600000,
+  "tiempoVida" : 25,
+  "inversionistas" : [ "Inversionista A", "Inversionista B" ],
+  "electricidadGeneradaPorDia" : 5000.0,
+  "ubicacion" : "Ubicación del Proyecto",
+  "tipoEnergia" : "Solar"
+} ]

@@ -1,0 +1,11 @@
+{
+  "nombre" : "Molino de viento",
+  "inversion" : 1.0E7,
+  "fechaInicioConstruccion" : 1704067200000,
+  "fechaFinConstruccion" : 1809129600000,
+  "tiempoVida" : 35,
+  "inversionistas" : [ "Jose Aguilar", "Luis Jose" ],
+  "electricidadGeneradaPorDia" : 9000.0,
+  "ubicacion" : "Ubicación del Proyecto Geotérmico",
+  "tipoEnergia" : "Geotérmica"
+}

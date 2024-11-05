@@ -1,0 +1,11 @@
+{
+  "nombre" : "Proyecto Estructura",
+  "inversion" : 100000.0,
+  "fechaInicioConstruccion" : 1639267200000,
+  "fechaFinConstruccion" : 2238883200000,
+  "tiempoVida" : 70,
+  "inversionistas" : [ "Esteben Cueva", " David Hurtado" ],
+  "electricidadGeneradaPorDia" : 45789.0,
+  "ubicacion" : "Argetina",
+  "tipoEnergia" : "Hidraulica"
+}

@@ -1,0 +1,11 @@
+{
+  "nombre" : "Solecito",
+  "inversion" : 456.0,
+  "fechaInicioConstruccion" : 1730332800000,
+  "fechaFinConstruccion" : 1730419200000,
+  "tiempoVida" : 1,
+  "inversionistas" : [ "Dilan Chamba", " Daniel " ],
+  "electricidadGeneradaPorDia" : 12345.0,
+  "ubicacion" : "Lojita",
+  "tipoEnergia" : "Solar"
+}

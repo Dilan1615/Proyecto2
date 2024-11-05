@@ -1,0 +1,11 @@
+{
+  "nombre" : "Brisa",
+  "inversion" : 201200.0,
+  "fechaInicioConstruccion" : 976665600000,
+  "fechaFinConstruccion" : 989625600000,
+  "tiempoVida" : 10,
+  "inversionistas" : [ "Juan Jose", " Carlos" ],
+  "electricidadGeneradaPorDia" : 14563.0,
+  "ubicacion" : "Cuenca",
+  "tipoEnergia" : "Eolica"
+}

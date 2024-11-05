@@ -1,0 +1,11 @@
+{
+  "nombre" : "Proyecto Solar",
+  "inversion" : 500000.0,
+  "fechaInicioConstruccion" : 1730419200000,
+  "fechaFinConstruccion" : 1733011200000,
+  "tiempoVida" : 25,
+  "inversionistas" : [ "Persona1", "Persona2" ],
+  "electricidadGeneradaPorDia" : 1000.0,
+  "ubicacion" : "Guayaquil",
+  "tipoEnergia" : "Solar"
+}

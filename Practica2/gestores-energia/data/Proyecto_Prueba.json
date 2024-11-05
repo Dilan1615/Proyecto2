@@ -1,0 +1,11 @@
+{
+  "nombre" : "Proyecto Prueba",
+  "inversion" : 10000.0,
+  "fechaInicioConstruccion" : 1607731200000,
+  "fechaFinConstruccion" : 1860192000000,
+  "tiempoVida" : 10,
+  "inversionistas" : [ "Persona1", " Persona2" ],
+  "electricidadGeneradaPorDia" : 10000.0,
+  "ubicacion" : "Quito",
+  "tipoEnergia" : "Solar"
+}

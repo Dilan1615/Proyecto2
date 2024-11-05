@@ -1,0 +1,11 @@
+{
+  "nombre" : "Proyecto Ecuador",
+  "inversion" : 10000.0,
+  "fechaInicioConstruccion" : 1730592000000,
+  "fechaFinConstruccion" : 1838160000000,
+  "tiempoVida" : 70,
+  "inversionistas" : [ "Juan2", " Daniel " ],
+  "electricidadGeneradaPorDia" : 789256.0,
+  "ubicacion" : "Ecuador",
+  "tipoEnergia" : "Geotermica"
+}

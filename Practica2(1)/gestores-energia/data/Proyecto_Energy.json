@@ -1,0 +1,11 @@
+{
+  "nombre" : "Proyecto Energy",
+  "inversion" : 10.0,
+  "fechaInicioConstruccion" : 1704067200000,
+  "fechaFinConstruccion" : 1893456000000,
+  "tiempoVida" : 50,
+  "inversionistas" : [ "Dilan Chamba" ],
+  "electricidadGeneradaPorDia" : 9000.0,
+  "ubicacion" : "Catamyo",
+  "tipoEnergia" : "Solar"
+}
